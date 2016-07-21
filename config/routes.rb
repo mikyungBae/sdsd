@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
   get 'users/index'
 
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
+
   resources :users
+
   get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
