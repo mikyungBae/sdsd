@@ -1,3 +1,4 @@
+<br>
 <p>
  <strong>Commenter:</strong>
  <%= comment.commenter %>
@@ -9,7 +10,9 @@
 </p>
 
 <p>
- <%= link_to 'Destroy Comment', [comment.article, comment],
+<div style="float: right">
+ <%= link_to 'Destroy Comment', [comment.post, comment],
               method: :delete,
               data: { confirm: 'Are you sure?' } %>
+              </div>
 </p>
